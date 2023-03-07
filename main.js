@@ -3,7 +3,6 @@ import { ARButton } from "./ARButton.js";
 
 let container;
 let camera, scene, renderer;
-let controller;
 
 let reticle;
 

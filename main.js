@@ -46,8 +46,6 @@ function init() {
 
 	//
 
-	controller = renderer.xr.getController(0);
-
 	reticle = new THREE.Mesh(
 		new THREE.RingGeometry(0.15, 0.2, 32).rotateX(-Math.PI / 2),
 		new THREE.MeshBasicMaterial()
@@ -55,6 +53,13 @@ function init() {
 	reticle.matrixAutoUpdate = false;
 	reticle.visible = false;
 	scene.add(reticle);
+
+	const dot = new THREE.Mesh(
+		new THREE.SphereGeometry(0.01, 16, 16),
+		new THREE.MeshBasicMaterial()
+	);
+	dot.position.set(0, 0, 0);
+	reticle.add(dot);
 
 	//
 
